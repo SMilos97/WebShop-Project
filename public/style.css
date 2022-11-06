@@ -267,6 +267,9 @@ form h2{
 	
 	
 }
+.range,.low-hight,.random{
+	margin-left: 40px;
+}
 .low-hight{
 	padding-top: 20px;
 }
