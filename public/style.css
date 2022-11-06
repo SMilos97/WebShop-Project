@@ -255,31 +255,6 @@ form h2{
 	font-weight: 600;
 	letter-spacing: 2px;
 }
-
-
-
-/* .container-nav{
-    display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(360px, auto));
-	align-items: center;
-	gap: 2rem;
-	text-align: center;
-    
-}
-
-.rangeslide::-moz-range-thumb {
-	width: 25px;
-	height: 25px;
-	background: #04AA6D;
-	cursor: pointer;
-  }
-.low-hight{
-    width: 20%; 
-	/* padding-left: 80px;   */
-	
-	
-/* } */
-
 .filter{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(360px, auto));
