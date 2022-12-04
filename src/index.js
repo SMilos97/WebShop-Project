@@ -9,7 +9,7 @@ const tempelatePath = path.join(__dirname, '../tempelates')
 
 app.use(express.json())
 app.set("view engine", "ejs")
-// app.set("view engine","html")
+app.set("view engine", "html")
 app.set("views", tempelatePath)
 // app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }))
