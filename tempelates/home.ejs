@@ -16,25 +16,6 @@
         </style>
 </head>
 
-<!-- <body>
-
-    <!-- <div>
-        <% products.forEach((product)=> { %>
-
-            <p>
-                <%= product.title %>
-            </p>
-            <p>
-                <%= product.price%>
-            </p>
-            <img src=<%=product.imageURL %> />
-
-
-            <% }) %>
-    </div> -->
-
-<!-- </body> -->
-
 <body>
     <!-- header start -->
     <header>
@@ -46,7 +27,6 @@
             <li><a href="../tempelates/signup.ejs">Sign up</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-
     </header>
     <!--shop start-->
     <section class="shop" id="shop">
@@ -55,7 +35,6 @@
             <div class="total"></div>
             <div class="cart-items">
             </div>
-
         </div>
         <div class="filter">
             <div class="range">
@@ -76,7 +55,7 @@
         <div class="container">
             <!-- <% products.forEach((product)=> { %> -->
             <div class="box">
-                <img alt="" src="../public/img/main1.jpg">
+                <img alt="" src="<%= product.imageURL %>">
 
                 <h4 class="name">
                     <%= product.title %>
@@ -89,150 +68,6 @@
                 <button onclick="addToCart(this)">ADD TO CART</button>
 
             </div>
-
-            <div class="box">
-                <img alt="" src="../img/main2.jpg">
-                <h4 class="name">
-                    <%= product.title %>
-                </h4>
-                <span class="price">
-                    <%= product.price%>
-                </span>
-                <p>Quantity:</p>
-                <input type="number" name="quantity" value="0" min="0"><br>
-                <button onclick="addToCart(this)">ADD TO CART</button>
-            </div>
-
-            <div class="box">
-                <img alt="" src="../img/main3.jpg">
-                <h4 class="name">
-                    <%= product.title %>
-                </h4>
-                <span class="price">
-                    <%= product.price%>
-                </span>
-                <p>Quantity:</p>
-                <input type="number" name="quantity" value="0" min="0"><br>
-                <button onclick="addToCart(this)">ADD TO CART</button>
-            </div>
-
-            <div class="box">
-                <img alt="" src="../img/main4.jpg">
-                <h4 class="name">
-                    <%= product.title %>
-                </h4>
-                <span class="price">
-                    <%= product.price%>
-                </span>
-                <p>Quantity:</p>
-                <input type="number" name="quantity" value="0" min="0"><br>
-                <button onclick="addToCart(this)">ADD TO CART</button>
-            </div>
-
-            <div class="box">
-                <img alt="" src="../img/main5.jpg">
-                <h4 class="name">
-                    <%= product.title %>
-                </h4>
-                <span class="price">
-                    <%= product.price%>
-                </span>
-                <p>Quantity:</p>
-                <input type="number" name="quantity" value="0" min="0"><br>
-                <button onclick="addToCart(this)">ADD TO CART</button>
-            </div>
-
-            <div class="box">
-                <img alt="" src="../img/main6.jpg">
-                <h4 class="name">
-                    <%= product.title %>
-                </h4>
-                <span class="price">
-                    <%= product.price%>
-                </span>
-                <p>Quantity:</p>
-                <input type="number" name="quantity" value="0" min="0"><br>
-                <button onclick="addToCart(this)">ADD TO CART</button>
-            </div>
-
-            <div class="box">
-                <img alt="" src="../img/main7.jpg">
-                <h4 class="name">
-                    <%= product.title %>
-                </h4>
-                <span class="price">
-                    <%= product.price%>
-                </span>
-                <p>Quantity:</p>
-                <input type="number" name="quantity" value="0" min="0"><br>
-                <button onclick="addToCart(this)">ADD TO CART</button>
-            </div>
-
-            <div class="box">
-                <img alt="" src="../img/main8.jpg">
-                <h4 class="name">
-                    <%= product.title %>
-                </h4>
-                <span class="price">
-                    <%= product.price%>
-                </span>
-                <p>Quantity:</p>
-                <input type="number" name="quantity" value="0" min="0"><br>
-                <button onclick="addToCart(this)">ADD TO CART</button>
-            </div>
-
-            <div class="box">
-                <img alt="" src="../img/main9.jpg">
-                <h4 class="name">
-                    <%= product.title %>
-                </h4>
-                <span class="price">
-                    <%= product.price%>
-                </span>
-                <p>Quantity:</p>
-                <input type="number" name="quantity" value="0" min="0"><br>
-                <button onclick="addToCart(this)">ADD TO CART</button>
-            </div>
-
-            <div class="box">
-                <img alt="" src="../img/main10.jpg">
-                <h4 class="name">
-                    <%= product.title %>
-                </h4>
-                <span class="price">
-                    <%= product.price%>
-                </span>
-                <p>Quantity:</p>
-                <input type="number" name="quantity" value="0" min="0"><br>
-                <button onclick="addToCart(this)">ADD TO CART</button>
-            </div>
-
-            <div class="box">
-                <img alt="" src="../img/main11.jpg">
-                <h4 class="name">
-                    <%= product.title %>
-                </h4>
-                <span class="price">
-                    <%= product.price%>
-                </span>
-                <p>Quantity:</p>
-                <input type="number" name="quantity" value="0" min="0"><br>
-                <button onclick="addToCart(this)">ADD TO CART</button>
-            </div>
-
-            <div class="box">
-                <img alt="" src="../img/main12.jpg">
-                <h4 class="name">
-                    <%= product.title %>
-                </h4>
-                <span class="price">
-                    <%= product.price%>
-                </span>
-                <p>Quantity:</p>
-                <input type="number" name="quantity" value="0" min="0"><br>
-                <button onclick="addToCart(this)">ADD TO CART</button>
-            </div>
-            <!-- <% }) %> -->
         </div>
     </section>
     <!--about start-->
@@ -271,22 +106,10 @@
                 </ul>
             </div>
         </div>
-
-
-        <!-- <div class="action">
-			<form>
-				<h2>Registration</h2>
-				<input type="text" name="name" placeholder="Your Name" required><br>
-				<input type="text" name="firstname" placeholder="Your Firstname" required><br>
-				<input type="email" name="email"  placeholder="Your Email" required><br>
-				<input type="button" value="Submit">
-			</form>
-		</div> -->
     </section>
     <div class="last">
         <p>Created by Milos Stanisavljevic © 2022. </p>
     </div>
-    custom js link-->
     <script src="../js/main.js"></script>
     <script src="../js/cart.js"></script>
     <script src="../js/sort.js"></script>

@@ -25,11 +25,12 @@ app.get('/', async (req, res) => {
     })
 })
 
-app.get('/signup', (req, res) => {
+app.get('/sign', async (req, res) => {
+
     res.render("signup")
 })
 
-app.post("/signup", async (req, res) => {
+app.post("/sign", async (req, res) => {
 
 
 
@@ -40,7 +41,7 @@ app.post("/signup", async (req, res) => {
 
     await mongodb.collection.insertMany([data])
 
-    res.render("home")
+    res.redirect("/")
 
 })
 app.get("/product", async (req, res) => {
@@ -53,7 +54,7 @@ app.get("/product", async (req, res) => {
 
 app.post("/product", async (req, res) => {
 
-    console.log(req, 'afasdfasd');
+
 
     const data = {
         title: req.body.title,
