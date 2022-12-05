@@ -38,17 +38,12 @@
 
 		</div>
 		<div class="filter">
-			<div class="range">
-				<p>Price 0-100$</p>
-				<input type="range" min="1" max="100" value="50" class="rangeslide" id="rang"><span id="rez"></span><br>
-				<input class="submit-range" type="submit">
-			</div>
-			<div class="low-hight">
+			<!-- <div class="low-hight">
 				<select id="show">
 					<option value="">Low to hight</option>
 					<option value="">Hight to low</option>
 				</select>
-			</div>
+			</div> -->
 			<div class="random">
 				<input class="search-input" type="search" placeholder="Search products">
 			</div>
@@ -60,7 +55,7 @@
 				<span class="price"></span>
 				<p>Quantity:</p>
 				<input type="number" name="quantity" value="0" min="0"><br>
-				<button onclick="addToCart(this)">ADD TO CART</button>
+				<button id="btn" onclick="addToCart(this)">ADD TO CART</button>
 			</div>
 
 			<div class="box">

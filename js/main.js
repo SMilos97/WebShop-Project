@@ -26,6 +26,26 @@ function fetchData() {
 
 fetchData();
 
+function lowtohigh() {
+    let buton = document.getElementById('btn');
+
+    let mainEl = buton.closest('.box');
+    let price = mainEl.querySelector('.price').innerText;
+    let name = mainEl.querySelector('.name').innerText;
+    let quantity = mainEl.querySelector('input').value;
+    let cartItems = document.querySelector('.cashbox');
+
+    let span = document.querySelectorAll('.price')
+
+    console.log(span)
+
+    console.log(price)
+
+
+}
+
+lowtohigh();
+
 
 
 function hmgmenu() {

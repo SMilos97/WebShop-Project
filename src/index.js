@@ -9,7 +9,7 @@ const tempelatePath = path.join(__dirname, '../tempelates')
 
 app.use(express.json())
 app.set("view engine", "ejs")
-app.set("view engine", "html")
+// app.set("view engine", "html")
 app.set("views", tempelatePath)
 // app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }))
@@ -31,7 +31,7 @@ app.get('/signup', (req, res) => {
 
 app.post("/signup", async (req, res) => {
 
-    console.log(req, 'afasdfasd');
+
 
     const data = {
         name: req.body.name,
