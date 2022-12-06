@@ -7,11 +7,11 @@ const mongodb = require("./mongodb")
 
 const tempelatePath = path.join(__dirname, '../tempelates')
 
+// app.use(express.static("public"));
 app.use(express.json())
 app.set("view engine", "ejs")
 // app.set("view engine", "html")
 app.set("views", tempelatePath)
-// app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }))
 
 app.get('/', async (req, res) => {
@@ -68,8 +68,6 @@ app.post("/product", async (req, res) => {
     res.redirect("/")
 
 })
-
-
 
 
 app.listen(3000, () => {

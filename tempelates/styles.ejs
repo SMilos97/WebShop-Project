@@ -108,6 +108,7 @@
         border-radius: 10px;
         position: relative;
         transition: all .35s ease;
+        max-width: 400px;
     }
 
     .box button {
@@ -296,7 +297,7 @@
     .range,
     .low-hight,
     .random {
-        margin-left: 40px;
+        margin-left: 20px;
     }
 
 
@@ -370,9 +371,14 @@
         cursor: pointer;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
         #menu-icon {
             display: block;
+        }
+
+        .box {
+            max-width: 550px;
+            align-items: center;
         }
 
         header {
@@ -407,6 +413,7 @@
 
         .low-hight {
             padding-top: 20px;
+            margin-right: 140px;
         }
 
         .random {
