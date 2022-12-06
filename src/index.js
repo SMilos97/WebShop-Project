@@ -41,7 +41,7 @@ app.post("/sign", async (req, res) => {
 
     await mongodb.collection.insertMany([data])
 
-    res.redirect("/")
+    res.render("insertproducts")
 
 })
 app.get("/product", async (req, res) => {
