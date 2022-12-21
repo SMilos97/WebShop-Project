@@ -7,5 +7,24 @@
     "mongoose": "^6.7.5",
     "node.js": "^0.0.1-security",
     "nodemon": "^2.0.20"
-  }
+  },
+  "name": "webshop-project",
+  "description": "This project works as a web shop application that displays products entered by the administrator via the insertproduct form, which are entered in the database and also printed on the home page.\r The products interact with the user who can add products to the order where the price of all products will be added.\r On the signup page, data is entered that is stored in the database.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SMilos97/WebShop-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SMilos97/WebShop-Project/issues"
+  },
+  "homepage": "https://github.com/SMilos97/WebShop-Project#readme"
 }
