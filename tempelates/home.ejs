@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href=".../public/style.css">
     <%- include('styles.ejs') %>
+
         <title>Document</title>
         <style>
             body {
@@ -50,23 +51,23 @@
             </div>
         </div>
         <div class="container">
-            <!-- <% products.forEach((product)=> { %> -->
-            <div class="box">
-                <img alt="" src="<%= product.imageURL %>">
+            <% products.forEach((product)=> { %>
+                <div class="box">
+                    <img alt="" src="<%= product.imageURL %>">
 
-                <h4 class="name">
-                    <%= product.title %>
-                </h4>
-                <span class="price">
-                    <%= product.price%>
-                </span>
-                <p>Quantity:</p>
-                <input type="number" name="quantity" value="0" min="0"><br>
-                <button onclick="addToCart(this)">ADD TO CART</button>
+                    <h4 class="name">
+                        <%= product.title %>
+                    </h4>
+                    <span class="price">
+                        <%= product.price%>
+                    </span>
+                    <p>Quantity:</p>
+                    <input type="number" name="quantity" value="0" min="0"><br>
+                    <button onclick="addToCart(this)">ADD TO CART</button>
 
-            </div>
+                </div>
 
-            <!-- <% }) %> -->
+                <% }) %>
         </div>
     </section>
     <!--about start-->
