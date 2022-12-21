@@ -5,23 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href=".../public/style.css">
     <%- include('styles.ejs') %>
-
-        <title>Document</title>
-        <style>
-            body {
-                text-align: center;
-                align-items: center;
-            }
-        </style>
+        <title>App</title>
 </head>
 
 <body>
     <!-- header start -->
     <header>
         <a href="#" class="logo">WebShop</a>
-        <div class="bx bx-menu" id="menu-icon"></div>
+
         <ul class="navbar">
             <li><a href="#shop">Shop</a></li>
             <li><a href="#about">About</a></li>
@@ -32,51 +24,23 @@
     </header>
     <!--shop start-->
     <section class="shop" id="shop">
-        <div class="total"></div>
-        <div class="cashbox">
-            <div class="total"></div>
-            <div class="cart-items">
-            </div>
-
-        </div>
-        <div class="filter">
-            <div class="low-hight">
-                <select id="show">
-                    <option value="">Low to hight</option>
-                    <option value="">Hight to low</option>
-                </select>
-            </div>
-            <div class="random">
-                <input class="search-input" type="search" placeholder="Search products">
-            </div>
-        </div>
         <div class="container">
             <% products.forEach((product)=> { %>
                 <div class="box">
                     <img alt="" src="<%= product.imageURL %>">
-
                     <h4 class="name">
                         <%= product.title %>
                     </h4>
                     <span class="price">
-                        <%= product.price%>
+                        <%= product.price%>$
                     </span>
-                    <p>Quantity:</p>
-                    <input type="number" name="quantity" value="0" min="0"><br>
-
-                    <a href=""></a>
-                    <button onclick="addToCart(this)">ADD TO CART</button>
-
                     <form action="/order" method="post">
-
                         <input type="text" name="productid" value="<%= product._id %>" style="display:none">
-                        <input type="text" name="quantity" placeholder="quantity">
-
-                        <input type="submit">
-
+                        <input type="text" name="quantity" placeholder="Quantity" style="background-color: gainsboro;
+                        color: black;"><br>
+                        <input type="submit" style="padding-bottom: 24px;">
                     </form>
                 </div>
-
                 <% }) %>
         </div>
     </section>
@@ -121,13 +85,6 @@
     <div class="last">
         <p>Created by Milos Stanisavljevic © 2022. </p>
     </div>
-
-    <script src="../src/main.js"></script>
-    <script src="../src/cart.js"></script>
-    <script src="../src/sort.js"></script>
-    <script src="../src/index.js"></script>
-    <script src="../src/mongodb.js"></script>
-
 
 </body>
 
