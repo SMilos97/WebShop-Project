@@ -4,7 +4,7 @@ const path = require("path")
 const ejs = require("ejs")
 const mongodb = require("./mongodb")
 
-
+const objectid = mongodb.ObjectId
 const tempelatePath = path.join(__dirname, '../tempelates')
 
 // app.use(express.static("public"));
@@ -67,6 +67,51 @@ app.post("/product", async (req, res) => {
 
     res.redirect("/")
 
+})
+app.post("/order", async (req, res) => {
+
+    const { productid, quantity } = req.body
+
+    console.log(req.body);
+
+    const { price } = await mongodb.productscollection.findById(productid)
+
+    console.log(price);
+
+    await mongodb.orders.insertMany([{ productid, quantity, price: price * quantity }]);
+
+    res.redirect("/orders")
+
+
+
+
+})
+app.get('/orders', async (req, res) => {
+
+    let orders = await mongodb.orders.find();
+    const products = await mongodb.productscollection.find();
+    let totalprice = 0;
+
+    let orders1 = orders.map((order) => {
+        totalprice += order.price;
+
+
+        return {
+            ...order, product: products.find((prod) => {
+                console.log(order.productid.toString());
+                console.log(prod._id.toString());
+                return order.productid.toString() === prod._id.toString();
+            }) || "zika"
+        };
+    });
+    console.log(orders1)
+
+
+
+    res.render("orders", {
+        orders: orders1,
+        totalprice
+    })
 })
 
 

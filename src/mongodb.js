@@ -32,9 +32,24 @@ const ProductsSchema = new mongoose.Schema({
         required: true
     }
 })
+const OrderSchema = new mongoose.Schema({
+    productid: {
+        type: String,
+        required: true
+    },
+    quantity: {
+        type: String,
+        required: true
+    },
+    price: {
+        type: Number,
+        required: true
+    }
+})
 
-
+const orders = new mongoose.model("orders", OrderSchema)
 const collection = new mongoose.model("collection1", LogInSchema)
 const productscollection = new mongoose.model("productscollection", ProductsSchema)
 
-module.exports = { collection, productscollection };
+module.exports = { collection, productscollection, orders };
+
