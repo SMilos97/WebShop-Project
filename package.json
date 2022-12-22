@@ -11,7 +11,7 @@
   "name": "webshop-project",
   "description": "This project works as a web shop application that displays products entered by the administrator via the insertproduct form, which are entered in the database and also printed on the home page.\r The products interact with the user who can add products to the order where the price of all products will be added.\r On the signup page, data is entered that is stored in the database.",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "engines": {
     "node": "14.x"
   },
